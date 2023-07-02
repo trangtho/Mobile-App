@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txtProductName"
+            android:layout_width="248dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/imgProduct"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="+"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/imgProduct"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+        <TextView
+            android:id="@+id/txtQuantity"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/txtPlus"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+        <TextView
+            android:id="@+id/txtMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="--"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/txtQuantity"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+        <TextView
+            android:id="@+id/Delete"
+            android:layout_width="26dp"
+            android:layout_height="25dp"
+            android:text="X"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

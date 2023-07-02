@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="customer_review_label" type="id" />
+    <item name="total_review" type="id" />
+    <item name="see_all_label" type="id" />
+</resources>

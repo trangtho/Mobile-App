@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--product info-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+        <!--product image-->
+
+        <ImageView
+            android:id="@+id/image_product"
+            android:layout_width="match_parent"
+            android:layout_height="297dp"
+            tools:ignore="MissingConstraints" />
+        <!--price format-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--price-->
+            <TextView
+                android:id="@+id/text_view_product_price"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="25px"
+                android:fontFamily="sans-serif-black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/teal_blue"
+                android:textSize="100px"
+                tools:ignore="MissingConstraints" />
+            <!--currency-->
+            <TextView
+                android:id="@+id/text_view_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="25px"
+                android:fontFamily="sans-serif-medium"
+                android:text="VND"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imgFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+
+        </LinearLayout>
+        <!--product name-->
+        <!--subtitle-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15px"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="25sp"
+                android:typeface="normal"
+                tools:ignore="MissingConstraints" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_product_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15px"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="20sp" />
+        <!--line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#efefef"
+            tools:ignore="MissingConstraints" />
+        <!--customer review's bar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--customer review label-->
+            <TextView
+                android:id="@+id/customer_review_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="25px"
+                android:fontFamily="sans-serif-black"
+                android:text="Customer's review"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="17sp"
+                tools:ignore="MissingConstraints" />
+            <!--total label-->
+            <TextView
+                android:id="@+id/total_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="160dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="3"
+                android:textSize="17sp" />
+            <!--see all label-->
+            <TextView
+                android:id="@+id/see_all_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25px"
+                android:fontFamily="sans-serif-medium"
+                android:text="See all"
+                android:textSize="17sp" />
+            <!--see_all_review_arrow-->
+            <ImageView
+                android:id="@+id/arrow_see_all_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25px"
+                android:layout_weight="1"
+                android:backgroundTint="@color/second_blue"
+                app:srcCompat="@drawable/baseline_arrow_forward" />
+
+        </LinearLayout>
+        <!--line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#efefef"
+            tools:ignore="MissingConstraints" />
+        <!--customer review-->
+
+    </LinearLayout>
+    <!--add to cart layout-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/toolbar_view_product_detail"
+        android:layout_width="414dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:backgroundTint="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#efefef"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:orientation="horizontal">
+                    <!--button contact-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".25"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image_view_chat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@android:drawable/stat_notify_chat"
+                            app:tint="@color/second_blue" />
+
+                        <TextView
+                            android:id="@+id/textView_Home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chat"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <!--button buy now-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".25"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button_buy_now"
+                            style="@style/Widget.AppCompat.Button.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="14sp"
+                            android:background="@drawable/add_to_cart_style"
+                            android:text="Buy now"
+                            android:textColor="#FFFFFF"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                    </LinearLayout>
+                    <!--button add to cart-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".25"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button_add_to_cart"
+                            style="@style/Widget.AppCompat.Button.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="14sp"
+                            android:background="@drawable/add_to_cart_style"
+                            android:text="Add to cart"
+                            android:textColor="#FFFFFF"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
